@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/d1b7b1a654.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Lista de Tarefas</title>
+  </head>
+  <body>
+    <header>
+      <div class="cabecalho">
+        <h1>Lista de Tarefas</h1>
+      </div>
+    </header>
+    <section class="main">
+      <div class="nova-tarefa">
+        <input class="input-tarefa" placeholder="Digite a próxima tarefa..." />
+        <button class="btn-tarefa">Incluir</button>
+      </div>
+      <div class="container-tarefas">
+        <div class="tarefas">
+          <h2>Tarefas a fazer</h2>
+          <ul class="lista-tarefas" id="tarefas-pendentes"></ul>
+        </div>
+        <div class="tarefas concluidas">
+          <h2>Tarefas concluídas</h2>
+          <ul class="lista-tarefas" id="tarefa-concluida"></ul>
+        </div>
+      </div>
+    </section>
+    <script src="./src/js/index.js"></script>
+  </body>
+
+  <footer>
+    <div class="footer"></div>
+  </footer>
+</html>

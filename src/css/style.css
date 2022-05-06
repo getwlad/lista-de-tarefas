@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2d2d2d;
+  font-size: 1.2em;
+  font-family: Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+footer {
+  height: 80px;
+}
+.cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+}
+h1 {
+  padding: 10px 10px;
+  color: Gold;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container-tarefas {
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+  margin: 20px 20px;
+}
+.tarefas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  flex-grow: 1;
+  margin: 2px 10px;
+  padding: 10px 10px;
+}
+.tarefas h2 {
+  font-size: 1.3em;
+}
+.nova-tarefa {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+.input-tarefa {
+  height: 50px;
+  width: 80%;
+  margin: 5px;
+  padding: 10px;
+  font-size: 1.01em;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+
+  box-shadow: inset -2px 1px rgba(0, 0, 0, 0.03);
+}
+.btn-tarefa {
+  margin: 4px;
+  width: 60px;
+  height: 50px;
+  background: #3d3d3d;
+  color: #fff;
+  border: 1px solid;
+  border-radius: 10px;
+}
+.btn-tarefa:hover {
+  background: #313131;
+}
+.btn-tarefa:active {
+  transform: scale(0.98);
+}
+ul.lista-tarefas {
+  margin-top: 10px;
+  list-style: none;
+  width: 100%;
+  cursor: pointer;
+  /* font-weight: 700; */
+}
+li {
+  background-color: #fffe;
+  margin-bottom: 1px;
+  border-top: #2d2d2d;
+  border-bottom: #2d2d2d;
+  border-radius: 1px;
+  padding: 5px;
+
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+li > button {
+  cursor: pointer;
+  margin: 0;
+  width: 40px;
+  height: 40px;
+  color: red;
+  border: none;
+  background-color: transparent;
+}
+li > span {
+  padding: 10px;
+  flex-grow: 1;
+}
+
+.tarefas h2 {
+  color: #ff0a00;
+}
+
+.concluidas h2 {
+  color: #aaff00;
+}
+.concluidas span {
+  text-decoration: line-through;
+  color: #b2bec3;
+}
+@media only screen and (max-width: 1000px) {
+  .container-tarefas {
+    flex-direction: column;
+    align-items: center;
+  }
+  .tarefas {
+    width: 100%;
+  }
+}
