@@ -1,3 +1,4 @@
+const taskList = [];
 //Criação de elementos
 const input = document.querySelector(".input-tarefa");
 // funções
@@ -13,11 +14,25 @@ const createElement = (tagName, className) => {
 const erase = () => {
   input.value = "";
 };
+const updateList = () => {
+  document.querySelector("#tarefas-pendentes").innerHTML = "";
+  taskList.forEach((task) => {
+    const li = createElement("li");
+    li.innerHTML = task;
+    document.querySelector("#tarefas-pendentes").appendChild(li);
+  });
+};
 const submit = () => {
   if (!input.value || input.value === undefined || input.value === "") {
     return;
   }
-  //li
+  //usando array
+  // taskList.push(
+  //   `<span>${input.value}</span onclick={tarefaConcluida}><button onclick="{removerItem}" class="btn-remove"><i class="fa-solid fa-trash"></i></button>`
+  // );
+  // updateList();
+
+  // li
   const taskItem = createElement("li");
   //botao
   const trashBtn = createElement("button", "btn-remove");
@@ -31,7 +46,7 @@ const submit = () => {
   // inserir itens no li
   taskItem.appendChild(spanItem);
   taskItem.appendChild(trashBtn);
-  //inserir li na lista de tarefas
+  // inserir li na lista de tarefas
   document.querySelector("#tarefas-pendentes").appendChild(taskItem);
 
   erase();
@@ -52,6 +67,7 @@ const removerItem = (e) => {
     : e.target.parentNode.remove();
 };
 const tarefaConcluida = (e) => {
+  e.preventDefault();
   const id = e.target.parentNode.parentNode.id;
   if (id === "tarefas-pendentes") {
     const tarefasConc = document.querySelector("#tarefa-concluida");

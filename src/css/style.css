@@ -5,9 +5,9 @@
 }
 
 body {
-  background-color: #2d2d2d;
+  background-color: #a5befa;
   font-size: 1.2em;
-  font-family: Helvetica, sans-serif;
+  font-family: "Times New Roman", Times, serif;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -24,7 +24,7 @@ footer {
 }
 h1 {
   padding: 10px 10px;
-  color: Gold;
+  color: white;
 }
 .main {
   display: flex;
@@ -32,8 +32,6 @@ h1 {
   flex-grow: 1;
   align-items: center;
   justify-content: center;
-
-  font-family: Arial, Helvetica, sans-serif;
 }
 .container-tarefas {
   display: flex;
@@ -69,38 +67,40 @@ h1 {
   font-size: 1.01em;
   outline: none;
   border: none;
-  border-radius: 5px;
-
+  border-radius: 15px;
+  font-weight: 520;
   box-shadow: inset -2px 1px rgba(0, 0, 0, 0.03);
 }
 .btn-tarefa {
   margin: 4px;
-  width: 60px;
+  width: 50px;
   height: 50px;
-  background: #3d3d3d;
+  background: #eebe17;
   color: #fff;
-  border: 1px solid;
-  border-radius: 10px;
+  right: 9.6%;
+  position: absolute;
+  border-radius: 15px;
+  outline: none;
+  border: none;
 }
 .btn-tarefa:hover {
-  background: #313131;
+  background: #fece17;
 }
 .btn-tarefa:active {
-  transform: scale(0.98);
+  transform: scale(1.08);
 }
 ul.lista-tarefas {
   margin-top: 10px;
   list-style: none;
   width: 100%;
   cursor: pointer;
-  /* font-weight: 700; */
 }
 li {
   background-color: #fffe;
   margin-bottom: 1px;
   border-top: #2d2d2d;
   border-bottom: #2d2d2d;
-  border-radius: 1px;
+  border-radius: 8px;
   padding: 5px;
 
   display: flex;
@@ -122,11 +122,13 @@ li > span {
 }
 
 .tarefas h2 {
-  color: #ff0a00;
+  color: #ff2e2e;
+  font-weight: 600;
 }
 
 .concluidas h2 {
-  color: #aaff00;
+  color: rgba(255, 248, 144, 0.973);
+  font-weight: 600;
 }
 .concluidas span {
   text-decoration: line-through;
@@ -138,6 +140,9 @@ li > span {
     align-items: center;
   }
   .tarefas {
-    width: 100%;
+    width: 80%;
+  }
+  .btn-tarefa {
+    right: 9.1%;
   }
 }
